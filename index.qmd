@@ -7,9 +7,10 @@ number-sections: true
 format:
   html: default
   docx: default
+editor : visual
 ---
 
-![](images/clipboard-3801760617.jpeg)
+![](poltekapp.jpg){fig-align="center}
 
 ## Pendahuluan
 
@@ -106,6 +107,7 @@ summary(data)
 ggplot(data, aes(x = X, y = Y)) + geom_point(color = "green", size = 2) + labs(title = "Hubungan Produksi Padi dan Harga Beras dengan Garis Regresi",x = "Produksi Padi (ton)", y = "Harga Beras (Rupiah)") + theme_minimal()
 
 ```
+![](Scatterplot.png){fig-align="center"}
 
 ### Metode analisis
 
@@ -130,13 +132,14 @@ hasil tersebut menunjukkan hubungan yang positif antara kedua variabel.
 ```{r}
 plot(data$X, data$Y, main="Hubungan Produksi Padi dan Harga Beras", xlab="Produksi Padi (ton)", ylab="Harga Beras (Rupiah)", pch=19, col="aquamarine")
 ```
+![](hub.png){fig-align="center"}
 
 dapat dilihat bahwa ada tren positif yang jelas. selanjutnya melakukan regresi linear sederhana untuk dapat memprediksi harga beras berdasarkan nilai produksi padi.
 
 ```{r}
 ggplot(data, aes(x = X, y = Y)) + geom_point(color="orange", size = 2) + geom_smooth(method = "lm", se = FALSE, color = "aquamarine", size = 1) +  labs(title = "Hubungan Produksi Padi dan Harga Beras di Provinsi Jawa Timur", x = "Produksi Padi (ton)", y = "Harga Beras (Rupiah)") + theme_minimal()
 ```
-
+![](regresi.png){fig-align="center"}
 ### Analisis masalah
 
 Hasil regresinya adalah
